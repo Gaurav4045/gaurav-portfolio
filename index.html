@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gaurav | Creative Portfolio</title>
+<meta name="description" content="Gaurav — Python & Full‑Stack developer portfolio with interactive sections and animated background.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<header class="nav">
+  <div class="brand">Gaurav</div>
+  <nav>
+    <button class="nav-btn" data-target="about">About</button>
+    <button class="nav-btn" data-target="skills">Skills</button>
+    <button class="nav-btn" data-target="projects">Projects</button>
+    <button class="nav-btn" data-target="experience">Experience</button>
+    <button class="nav-btn" data-target="education">Education</button>
+    <button class="nav-btn" data-target="contact">Contact</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <img src="assets/profile.jpeg" alt="Gaurav profile" class="avatar" />
+    <h1>Gaurav</h1>
+    <h2 class="type">Aspiring Python & Full‑Stack Developer</h2>
+    <div class="cta">
+      <a class="btn primary" data-target="projects">View My Work</a>
+      <a class="btn ghost" href="assets/Gaurav_Resume.pdf" download>Download Résumé</a>
+    </div>
+    <div class="links">
+      <a href="https://linkedin.com/in/gaurav-sharma-4371431bb" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Gaurav4045/websiteproject" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- OVERLAY PANELS -->
+<div class="overlay" id="overlay" aria-hidden="true"></div>
+
+<div class="panel" id="panel-about" role="dialog" aria-modal="true" aria-labelledby="title-about" tabindex="-1">
+  <button class="close" aria-label="Close">×</button>
+  <h2 id="title-about">About Me</h2>
+  <p>Aspiring Python Developer skilled in HTML, CSS, JavaScript, Python, and Django. I love building fast, simple, and delightful web apps — from clean APIs to polished front‑ends.</p>
+</div>
+
+<div class="panel" id="panel-skills" role="dialog" aria-modal="true" aria-labelledby="title-skills" tabindex="-1">
+  <button class="close" aria-label="Close">×</button>
+  <h2 id="title-skills">Skills</h2>
+  <div class="grid skills">
+    <!-- Icons + labels -->
+    <div class="card"><img src="assets/python.svg" alt="Python"><span>Python</span></div>
+    <div class="card"><img src="assets/html.svg" alt="HTML"><span>HTML</span></div>
+    <div class="card"><img src="assets/css.svg" alt="CSS"><span>CSS</span></div>
+    <div class="card"><img src="assets/javascript.svg" alt="JavaScript"><span>JavaScript</span></div>
+    <div class="card"><img src="assets/react.svg" alt="React"><span>React.js</span></div>
+    <div class="card"><img src="assets/django.svg" alt="Django"><span>Django</span></div>
+    <div class="card"><img src="assets/mysql.svg" alt="MySQL"><span>MySQL</span></div>
+    <div class="card"><img src="assets/numpy.svg" alt="NumPy"><span>NumPy</span></div>
+    <div class="card"><img src="assets/pandas.svg" alt="Pandas"><span>Pandas</span></div>
+    <div class="card"><img src="assets/matplotlib.svg" alt="Matplotlib"><span>Matplotlib</span></div>
+  </div>
+</div>
+
+<div class="panel" id="panel-projects" role="dialog" aria-modal="true" aria-labelledby="title-projects" tabindex="-1">
+  <button class="close" aria-label="Close">×</button>
+  <h2 id="title-projects">Projects</h2>
+  <div class="grid projects">
+    <article class="card tall">
+      <h3>Grocery Store Website</h3>
+      <p class="stack">HTML • CSS • JavaScript • Bootstrap • Django</p>
+      <p>User‑friendly e‑commerce with browsing, search, filters, cart, and secure checkout.</p>
+      <p><a class="btn tiny" href="https://github.com/Gaurav4045/websiteproject" target="_blank" rel="noopener">View Project</a></p>
+    </article>
+    <article class="card">
+      <h3>Social Media App</h3>
+      <p class="stack">React • Appwrite</p>
+      <p>Users can register, post, follow, comment and like. Appwrite handles auth, DB & storage.</p>
+    </article>
+    <!-- Add more project cards here -->
+  </div>
+</div>
+
+<div class="panel" id="panel-experience" role="dialog" aria-modal="true" aria-labelledby="title-experience" tabindex="-1">
+  <button class="close" aria-label="Close">×</button>
+  <h2 id="title-experience">Experience</h2>
+  <div class="timeline">
+    <div class="event">
+      <div class="event-dot"></div>
+      <div class="event-body">
+        <h3>Full Stack Developer Trainee — NetcoreInfo Business Group</h3>
+        <span class="dates">Nov 2024 – Jun 2025</span>
+        <ul>
+          <li>Worked on a Django‑based web app in a full‑stack role.</li>
+          <li>Hands‑on in Django MVT, HTML, CSS, JavaScript.</li>
+          <li>Collaborated with a senior mentor and cross‑functional team.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="panel-education" role="dialog" aria-modal="true" aria-labelledby="title-education" tabindex="-1">
+  <button class="close" aria-label="Close">×</button>
+  <h2 id="title-education">Education</h2>
+  <ul class="edu">
+    <li><strong>B.Tech CSE</strong> — Echelon Institute of Technology <span class="dates">CGPA: 8.1     Nov 2021 – Jul 2025</span></li>
+    <li><strong>Class 12</strong> — Sd Memorial Sr. Sec. School <span class="dates">     96%</span></li>
+    <li><strong>Class 10</strong> — Sv Sr. Sec. School <span class="dates">     91%</span></li>
+  </ul>
+</div>
+
+<div class="panel" id="panel-contact" role="dialog" aria-modal="true" aria-labelledby="title-contact" tabindex="-1">
+  <button class="close" aria-label="Close">×</button>
+  <h2 id="title-contact">Contact</h2>
+  <p>Email: <a href="mailto:Gauravsharmaa525252@gmail.com">Gauravsharmaa525252@gmail.com</a></p>
+  <p>Phone: <a href="tel:+917206612352">+91 7206612352</a></p>
+</div>
+
+<script src="script.js"></script>
+
+<footer class="footer">
+  <p>© 2025 Gaurav • Built with passion & neon</p>
+  <p>
+    <a href="https://linkedin.com/in/gaurav-sharma-4371431bb" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/Gaurav4045/websiteproject" target="_blank">GitHub</a> |
+    <a href="mailto:Gauravsharmaa525252@gmail.com">Email Me</a>
+  </p>
+</footer>
+
+</body>
+</html>
